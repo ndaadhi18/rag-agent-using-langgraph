@@ -9,6 +9,17 @@ A Retrieval-Augmented Generation (RAG) agent that answers questions from a small
 - **LangSmith** for tracing 
 
 ---
+## Try the Application here
+
+You can try the deployed Streamlit application here:
+**https://agentic-rag-using-langgraph.streamlit.app/**
+
+This hosted version allows you to:
+- Ask questions related to renewable energy  
+- See retrieved context from ChromaDB  
+- View reflection scores and regenerated answers  
+---
+
 ## How It Works
 
 **Workflow (LangGraph):**
@@ -78,7 +89,6 @@ This will create/refresh `local_vector_store/` with embeddings.
 streamlit run app.py
 ```
 Open the local URL shown in the terminal and start chatting.
-
 ---
 
 
