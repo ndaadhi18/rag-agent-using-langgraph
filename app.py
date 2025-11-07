@@ -59,7 +59,7 @@ def main():
                     st.write(f"**Quality Score:** {result['reflection_score']:.2f}")
 
                     if result.get("retrieved_docs"):
-                        with st.expander("Retrieved Context"):
+                        with st.expander("Retrieved Context and feedback"):
                             for i, doc in enumerate(result["retrieved_docs"], 1):
                                 st.write(f"**Document {i}:**")
                                 st.markdown(doc.page_content[:250] + "...")

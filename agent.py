@@ -5,9 +5,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from langgraph.graph import StateGraph, END
-from typing import TypedDict, Annotated, Literal
+from typing import TypedDict
 from pydantic import BaseModel, Field
-from operator import add
 
 load_dotenv()
 
@@ -16,7 +15,6 @@ VECTOR_STORE_PATH = "local_vector_store"
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 GEMINI_MODEL = "gemini-2.5-flash"
 TOP_K_RETRIEVAL = 3
-MAX_REFLECTION_ATTEMPTS = 2
 
 
 # Define the agent state
@@ -38,9 +36,6 @@ class ReflectionResult(BaseModel):
 def initialize_components():
     """
     Initialize LLM, embeddings, and vector store
-    
-    Returns:
-        Tuple of (llm, embeddings, vectorstore)
     """
     print("\nInitializing agent components...")
     
@@ -51,7 +46,7 @@ def initialize_components():
     )
     print(f"LLM: {GEMINI_MODEL}")
     
-    # Initialize embeddings (same as used in ingestion)
+    # Initialize embeddings
     embeddings = HuggingFaceEmbeddings(
         model_name=EMBEDDING_MODEL,
         model_kwargs={'device': 'cpu'},
@@ -82,8 +77,7 @@ llm, embeddings, vectorstore = initialize_components()
 # ==================== NODE 1: PLAN ====================
 def plan_node(state: AgentState) -> AgentState:
     """
-    Plan node: Decides if retrieval is needed for the question
-    For simplicity, we always set needs_retrieval=True
+    Plan node: Decides if retrieval is needed for the question, use simple keyword matching
     """
     print(f"\n{'='*60}")
     print("NODE 1: PLAN")
@@ -116,7 +110,7 @@ def retrieve_node(state: AgentState) -> AgentState:
     
     # Query vector store
     print(f"Querying vector store (top {TOP_K_RETRIEVAL} chunks)...")
-    retriever = vectorstore.as_retriever(search_type='similarity', search_kwargs={"k": TOP_K_RETRIEVAL})
+    retriever = vectorstore.as_retriever(search_type='mmr', search_kwargs={"k": TOP_K_RETRIEVAL})
     docs = retriever.invoke(state['question'])
     
     print(f"Retrieved {len(docs)} documents\n")
@@ -140,7 +134,7 @@ def answer_node(state: AgentState) -> AgentState:
     print(f"{'='*60}")
     
     
-    # Create prompt with context
+    # prompt
     prompt_template = ChatPromptTemplate.from_messages([
         ("system", """You are a helpful AI assistant specializing in renewable energy and sustainable development.
 Use the provided context to answer the question accurately and concisely.
@@ -151,7 +145,7 @@ Context:
         ("human", "{question}")
     ])
     
-    # Generate answer
+    # answer generation
     print("Generating answer with Gemini...")
     messages = prompt_template.format_messages(
         context=state["context"],
@@ -161,7 +155,7 @@ Context:
     response = llm.invoke(messages)
     answer = response.content
     
-    print("Answer generated\n")
+    print("Generated answer: ", answer, "\n")
     state["answer"] = answer
     
     return state
@@ -171,7 +165,7 @@ Context:
 def reflect_node(state: AgentState) -> AgentState:
     """
     Reflect node: Evaluates answer quality and provides feedback
-    Returns a quality score and decides if regeneration is needed
+    Returns a quality score (0.0-1.0) and feedback string
     """
     print(f"{'='*60}")
     print("NODE 4: REFLECT")
@@ -205,8 +199,8 @@ Context used: {context}""")
     score = response.score
     feedback = response.feedback
     
-    print(f"✓ Quality Score: {score:.2f}")
-    print(f"✓ Feedback: {feedback}")
+    print(f"Quality Score: {score:.2f}")
+    print(f"Feedback: {feedback}")
     
     state["reflection_score"] = score
     state["reflection_feedback"] = feedback
@@ -226,12 +220,9 @@ def should_retrieve(state: AgentState) -> str:
 # ==================== BUILD GRAPH ====================
 def build_agent_graph():
     """
-    Constructs the LangGraph workflow with 4 nodes
-    
-    Returns:
-        Compiled LangGraph application
+    builds the LangGraph workflow with 4 nodes
     """
-    print("\n🏗️  Building LangGraph agent workflow...")
+    print("\nBuilding LangGraph agent workflow...")
     
     # Create graph
     workflow = StateGraph(AgentState)
@@ -274,12 +265,6 @@ agent_app = build_agent_graph()
 def query_agent(question: str) -> dict:
     """
     Main function to query the agent
-    
-    Args:
-        question: User's question
-        
-    Returns:
-        Dictionary containing answer and metadata
     """
     print("\n" + "="*60)
     print("STARTING AGENT EXECUTION")
@@ -312,21 +297,3 @@ def query_agent(question: str) -> dict:
     print("="*60)
     
     return result
-
-# ==================== TESTING ====================
-if __name__ == "__main__":
-    # Test the agent with a sample question
-    test_question = "Who is the director of the movie Inception?"
-    
-    result = query_agent(test_question)
-    
-    print("\n" + "="*60)
-    print("FINAL RESULT")
-    print("="*60)
-    print(f"\nQuestion: {result['question']}")
-    print(f"\nAnswer:\n{result['answer']}")
-    print(f"\nQuality Score: {result['reflection_score']:.2f}")
-    print(f"Retrieved {len(result['retrieved_docs'])} documents")
-    print(f"Feedback: {result['feedback']}")
-
-    print("="*60 + "\n")
