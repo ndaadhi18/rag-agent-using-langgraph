@@ -1,0 +1,61 @@
+Renewable Energy in India: Sources, Status, and Government Initiatives
+
+India has emerged as one of the world’s most dynamic markets for renewable energy (RE). The push is driven by the country’s growing electricity demand, the need to reduce import dependence for fossil fuels, and commitments to decarbonization. India’s renewable portfolio is broad—spanning solar, wind, hydropower (including small hydro), biomass, biogas, and waste-to-energy—with emerging interest in offshore wind, tidal, and geothermal resources. This document summarizes the major renewable energy sources and the most important policies and programs that enable growth and grid integration.
+
+Major Renewable Energy Sources in India
+
+1) Solar Power (Utility-Scale and Rooftop)
+Solar is the fastest-growing renewable source in India. The country’s high solar irradiance, vast land availability in several states (Rajasthan, Gujarat, Andhra Pradesh, Karnataka, Madhya Pradesh), and falling module costs have made large-scale solar parks and decentralized installations viable. Rooftop solar is expanding for residential, commercial, and industrial consumers, aided by net metering, capital subsidies, and innovative financing. Solar PV dominates, but solar thermal for process heat, water heating, and concentrated solar power (CSP) in niche applications also contribute. Emerging trends include agrivoltaics, canal-top solar, and hybridization with storage or wind for round-the-clock (RTC) supply.
+
+2) Onshore Wind Power
+Wind power is concentrated in high-wind corridors across Tamil Nadu, Gujarat, Maharashtra, Karnataka, and Rajasthan. India has a mature turbine manufacturing base and a strong operations and maintenance ecosystem. Repowering older wind farms with modern turbines can unlock higher capacity factors, while wind-solar hybrid plants lower variability and improve land/evacuation utilization. Offshore wind is at an early stage, with resource assessments and initial tenders under development, especially off the coasts of Gujarat and Tamil Nadu.
+
+3) Hydropower and Small Hydro
+Hydropower provides clean, dispatchable electricity and valuable grid services like peaking capacity and frequency response. Small hydro (up to 25 MW) is important in hilly states—Himachal Pradesh, Uttarakhand, the North-East—and in canal-based schemes. Large hydro is increasingly recognized as a renewable resource for balancing variable renewables, with pumped storage projects (PSPs) gaining traction to provide multi-hour storage and support for solar/wind integration.
+
+4) Biomass and Biogas
+Biomass-based generation uses agricultural residues (paddy straw, bagasse, cotton stalk, etc.), wood waste, and energy crops. Cogeneration in sugar mills (bagasse-based) is well-established, with power exported to the grid. Biogas from cattle dung and organic waste fuels household cooking, community applications, and compressed biogas (CBG) for transport. Bio-CNG plants under various schemes help manage waste sustainably, create rural livelihoods, and displace fossil-based LPG/CNG. Sustainability hinges on efficient collection logistics and avoidance of residue burning.
+
+5) Waste-to-Energy (WtE)
+Urban municipal solid waste and sewage provide feedstock for electricity, heat, and biogas/CBG. Modern WtE plants combine segregation, biomethanation, and waste incineration to minimize landfill use, reduce methane emissions, and recover energy. Successful projects depend on robust waste segregation, long-term feedstock contracts with urban local bodies, and strict environmental compliance.
+
+6) Emerging Sources: Offshore Wind, Tidal, and Geothermal
+Offshore wind has high potential along India’s western and southern coasts; development requires marine surveys, port/logistics infrastructure, and bankable offtake frameworks. Tidal energy has niche potential in the Gulf of Kutch and the Sundarbans area, while geothermal prospects exist in regions like Puga Valley (Ladakh). These technologies are at pilot or pre-commercial stages and may scale as costs fall and policy frameworks mature.
+
+Cross-Cutting Enablers and Challenges
+Grid integration, forecasting, scheduling, and balancing of variable renewable energy are central challenges. Strengthening transmission (including inter-state corridors), deploying energy storage (battery and pumped storage), and expanding demand response are ongoing priorities. Land acquisition, environmental clearances, and the financial health of distribution companies (DISCOMs) influence project timelines and payment security. Domestic manufacturing of modules, cells, wafers, and balance-of-system components is expanding under incentive schemes. Distributed energy resources (DERs), smart meters, and digitalization improve visibility and control at the edge of the grid.
+
+Key Government Initiatives, Policies, and Programs
+
+1) National Solar Mission (NSM)
+Launched under the National Action Plan on Climate Change (NAPCC), the NSM catalyzed India’s utility-scale and rooftop solar markets with clear targets, policy support, and visibility for investors and manufacturers. It enabled competitive tariffs through transparent bidding, viability gap funding (where applicable), and supportive regulations such as net metering at the state level.
+
+2) Wind-Solar Hybrid Policy
+This policy encourages co-locating wind turbines and solar PV to share land, grid infrastructure, and reduce variability. Hybrid plants improve plant load factors and optimize transmission investments. Many states and central agencies have issued tenders for hybrid and round-the-clock (RTC) renewable power with storage.
+
+3) Green Energy Corridor (GEC)
+The GEC program develops intra-state and inter-state transmission lines, substations, and reactive compensation to evacuate renewable power from resource-rich regions to demand centers. It also supports dynamic reactive power management and grid modernization necessary for higher renewable penetration.
+
+4) Renewable Purchase Obligations (RPO) and Renewable Energy Certificates (REC)
+RPOs mandate that distribution companies and certain large consumers procure a minimum share of their electricity from renewable sources. RECs provide a market-based instrument to meet obligations when direct procurement is not feasible. Over time, RPO trajectories have become more ambitious, driving demand for renewable power and enabling long-term power purchase agreements (PPAs).
+
+5) Rooftop Solar Programme and Residential Initiatives
+Rooftop solar is incentivized through capital subsidies for households, net/gross metering frameworks, and aggregator models that simplify onboarding for consumers. Newer residential schemes emphasize making rooftop systems affordable, enabling households to reduce bills and contribute to local generation, often paired with smart meters for better visibility and control.
+
+6) PM-KUSUM (Farmer-Centric Solar)
+The Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan supports decentralized solar for agriculture: standalone solar pumps, grid-connected pumps, and small solar plants on farmers’ fields. It reduces diesel dependence, stabilizes irrigation, and provides an income stream when surplus electricity is fed to the grid.
+
+7) Production Linked Incentive (PLI) for Solar Manufacturing
+The PLI scheme supports domestic manufacturing of high-efficiency solar PV modules and upstream components (cells, wafers, ingots), promoting an integrated supply chain. The goal is to reduce import dependence, build scale, and foster technology upgrades, while ensuring bankable quality for utility and rooftop projects.
+
+8) ISTS Charge Waivers and Open Access Reforms
+Waivers on Inter-State Transmission System (ISTS) charges for eligible renewable projects improve project economics and encourage interstate trade of green power. Reforms in open access—such as clearer rules for green open access and banking—enable commercial and industrial (C&I) consumers to contract renewables directly, accelerating decarbonization in industry.
+
+9) Green Hydrogen Mission (Enabler for RE Integration)
+While hydrogen itself is an energy carrier, the National Green Hydrogen Mission is pivotal for deep decarbonization in refining, fertilizers, steel, and heavy transport. It creates demand for large volumes of renewable electricity for electrolysis, supports electrolyzer manufacturing, and lays the groundwork for future RE-to-hydrogen value chains, including ammonia for export.
+
+10) Support for Hydro and Pumped Storage
+Policies recognize the role of hydro and pumped storage in balancing VRE (variable renewable energy). Incentives and streamlined approvals for PSPs help provide multi-hour storage and peak capacity, complementing solar and wind. Canal-top solar and hydro-solar hybrids are also encouraged in some states to optimize land and water resources.
+
+Conclusion
+India’s renewable energy transition is multi-dimensional: scaling solar and wind; leveraging hydro for flexibility; deploying biomass, biogas, and waste-to-energy for circularity; and preparing for offshore wind and green hydrogen at scale. With enabling policies, stronger grids, storage deployment, and domestic manufacturing, India is positioned to meet rising demand while cutting emissions and improving energy security. Continued progress will require timely payments to generators, robust project execution at the state level, and accelerated modernization of distribution utilities, but the direction of travel is clear and increasingly cost-competitive.
