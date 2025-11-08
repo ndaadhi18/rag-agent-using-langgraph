@@ -1,6 +1,7 @@
 dotenv
 langchain
 langchain-google-genai
+langchain-huggingface
 langchain-core
 langchain-community
 langchain-text-splitters
